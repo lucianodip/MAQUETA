@@ -1,0 +1,159 @@
+@import url(
+			'https://fonts.googleapis.com/css2?family=Abel&family=Raleway:ital,wght@0,400;0,900;1,200;1,600&family=Sansita+Swashed:wght@300;900&display=swap'
+		);
+*{
+	box-sizing: border-box;
+	font-family: Raleway,abel, sans serif;
+
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	margin: 0;
+}
+nav, .menu{
+	position: sticky;
+	top:0;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #006064;
+	z-index: 9999
+
+}
+
+nav a{
+	color:#FFFF;
+	padding: .5rem;
+	text-decoration: none;
+}
+
+nav > a{
+	font-size: 1.2rem;
+	font-weight:.5rem; 
+
+}
+	#menu{
+			display: none;
+			margin:.5rem;
+			border:2px solid #936;
+			padding:.2rem .7rem;
+			color:#936;
+			background-color: transparent;
+			font-size: 2rem;
+		}	
+#menu:hover{
+	color:pink;
+	background-color: #80CBC4;
+}
+
+.menu a:hover{
+	color: white;
+	background-color: #80CBC4;
+
+}
+
+.menu li:last-child{
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	overflow: hidden;
+	width: 2rem;
+	height: 2rem;
+	text-align:center;
+	line-height: 2rem;
+	border-radius: 50%;
+	background-color: #26A69A;
+	opacity: .5;
+
+}
+
+.menu li: last-child:hover{
+	opacity: 1;
+}
+
+#header{
+	position: relative;
+	display: flex;;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+	padding: 1rem;
+	color: #CCC;
+	font-size: 3rem;
+	text-shadow: .2rem .2rem .5rem black;
+
+}
+
+#header h1, #header p{
+	margin:0;
+}
+
+.slider li{
+	position: absolute;
+	list-style: none;
+	background-size: cover;
+	background-position: center;
+
+}
+.slider li:nth-child(1){ background-image: url(../assets/img/casa2.jpg)			}
+		.slider li:nth-child(2){ background-image: url(../assets/img/casa3.jpg)			}
+		.slider li:nth-child(3){ background-image: url(../assets/img/casa4.jpg)			}
+		.active{
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+
+#prev,#next{
+	position: absolute;;
+	top:0;
+	width: 6rem;
+	height: 100%;
+	line-height: 600px;
+	text-align:center;
+	font-size: 3rem;
+	color:#ccc;
+	text-decoration: none;
+
+}
+
+#prev{
+			left:0;
+		}
+		#next{
+			right: 0;
+		}
+		#header a:hover{
+			background-color: rgba(204,204,204,.2);
+			
+		}
+		main{
+				display: grid;
+				grid-template-areas: 
+					"section section aside"
+					"article-a article-b aside";
+				justify-content: center;
+				gap:1rem;
+				max-width: 1140px;
+				margin:auto;
+				padding:1rem;
+			}
+			section{
+				grid-area: section;
+			}
+			aside{
+				grid-area: aside;
+			}
+			article:first-of-type{
+				grid-area: article-a;
+			}

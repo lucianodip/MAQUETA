@@ -1,0 +1,475 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Abel&family=Raleway:ital,wght@0,400;0,900;1,200;1,600&family=Sansita+Swashed:wght@300;900&display=swap'
+		);
+	/*Todos los elementos*/
+	*{
+		box-sizing: border-box;
+		/*
+			CONTENT-BOX
+				width + padding + border = final-width
+				300px	50px	  2px	 = 404px
+			BORDER-BOX
+				width = final-width
+				300px = 300px
+				width - padding - border = content-width
+				300px	50px	  2px	 = 196px
+		*/
+		font-family: Raleway, Abel, sans-serif;
+	}
+	html{
+		scroll-behavior: smooth;
+	}
+/*Encabezado y Pie de Pagina*/
+	#header, 
+	#footer{
+		color:#ccc;
+		background-color: #012; /*RRGGBB*/
+		text-transform: uppercase;
+		padding:20px;
+		/*
+			Selectores
+				Etiqueta (header)
+					generales header{color:darkblue;}
+					anidados header h1{color:blue;}
+				Clase (.header)
+					generales .header {color:yellow;}
+					anidados .header h1 {color:orange;}
+				Id (#header)
+					generales #header {color:tomato;}
+					anidados #header h1 {color:darkred;}
+		*/
+		/*background*/
+			background-image: url(../assets/img/osx-mojave-night.jpg);
+			background-size: cover; /*x y*/
+			background-repeat: no-repeat;
+			background-position: top center; /*x y*/
+	}	
+	#footer{
+		background-position: bottom center;
+	}
+	#header a, 
+	#footer a{
+		color:#ddd;
+		text-decoration: none;
+		font-weight: bold;
+	}
+/*Barra de Navegacion*/
+	nav{
+		background-color: rgba(30,90,200,.2); /*alpha = transparencia*/
+		/*
+			Sintesis Adhitiva (RR GG BB) dec 0 al 255 => hex 00 al ff
+				Rojo:		255 0 0;  	= ff0000
+				Cian:		0 255 255;	= 00ffff
+				Verde: 		0 255 0;	= 00ff00
+				Magenta:	255 0 255;	= ff00ff
+				Azul: 		0 0 255;	= 0000ff
+				Amarillo: 	255 255 0;	= ffff00
+				Negro: 		0 0 0;		= 000000
+				Blanco: 	255 255 255;= ffffff
+		*/
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+	.menu li{
+		display: inline-block;
+		padding:1em; /*ancho de la M del elemento Padre*/
+	}
+	.menu li:hover{
+		background-color: rgba(30,90,200,.3);
+	}
+/*Redes Sociales*/
+	.social{
+		background-color: rgba(255,255,255,.5);
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		border-radius: .5em;
+		padding:.5rem;
+		max-width: 280px;
+	}
+	.social a{
+		display: block;
+		width:64px;
+		height:64px;
+		border-radius: .2em;
+			background-size: 32px;
+			background-repeat: no-repeat;
+			background-position: center;
+	}
+	/*Iconos*/
+		.social a:first-child{ 
+			background-image: url(../assets/social/facebook.svg); 
+		}
+		.social a:nth-child(2){
+			background-image: url(../assets/social/twitter.svg);
+		}
+		.social a:nth-child(3){
+			background-image: url(../assets/social/instagram.svg);
+		}
+		.social a:last-child{ 
+			background-image: url(../assets/social/whatsapp.svg);
+		}
+	.social a:hover{
+		background-size: 54px;
+	}
+/*Contenido Principal*/
+	main{
+		background-image: url(../assets/img/cr.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	main, article, section{
+		padding:1em;
+		background-color: rgba(230,230,230,.7);
+	}
+	article{
+		margin: auto;
+		max-width: 1440px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	article header{
+		width: 100%;
+	}
+	section{
+		width:50%;
+		min-width: 360px;
+		max-width: 720px;
+	}
+	section p::first-line{
+		color:#124;
+		font-weight: bold;
+	}
+	section p:first-letter{
+		font-size: 4em;
+		float: left;
+		margin-right: .2em;
+	}
+	/*Flexbox*/
+		.flex{
+			border:2px solid #333;
+			padding:.2em;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+		}
+		.flex div{
+			width:80px;
+			line-height: 80px;
+			padding:0 1em;
+			border:2px dotted;
+			color:#ccc;
+			background-color: #248;
+		}
+		.align{
+			height:240px;
+				align-items: center;
+		}
+		.self{ align-self: flex-end; }
+		.col{ flex-direction: column; }
+		.reverse{ flex-direction: row-reverse; }
+		.col-reverse{ flex-direction: column-reverse; }
+	/*CSS Grid*/
+		.grid{
+			border: 2px solid #333;
+			padding:1rem;
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-template-rows: 50px 50px 50px;
+				gap:1rem; /*row column*/
+		}
+		.grid div, .grid-align div{
+			border: 2px solid #ccc;
+		}
+		section:first-of-type .grid div:first-child{
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		section:first-of-type .grid div:last-child{
+			grid-row-start: 2;
+			grid-row-end: 4;
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+		.grid-align{
+			height: 216px;
+			border: 2px solid #333;
+			padding:1rem;
+				display: grid;
+				grid-template-columns: auto auto;
+				justify-content: space-around;
+				align-content: center;
+		}
+		.template{
+			grid-template-areas: 
+				"header header header"
+				"section section aside"
+				"article article aside"
+				"footer footer footer"
+			;
+			grid-template-rows: 50px 50px 50px 50px;
+			gap:.5rem;
+		}
+		.template div:first-child{ grid-area: header; }
+		.template div:first-child + div{ grid-area: aside; }
+		.template div:nth-child(3){	grid-area: section; }
+		.template div:nth-last-child(2){ grid-area: article; }
+		.template div:last-child{ grid-area: footer; }
+	/*Pseudo-elements ::BEFORE - ::AFTER*/
+		.before .header h1::after{
+			content:'Pseudo-elementos AFTER & BEFORE';
+		}
+		.before p::before{
+		content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum beatae doloremque praesentium enim est, commodi, nisi necessitatibus et, suscipit explicabo labore architecto, aliquam reiciendis. Nam ducimus explicabo libero laboriosam aliquam dolores in laborum, placeat quos accusamus enim, facere itaque earum porro illo ab quo odit omnis laudantium quod voluptatem. Id in dolores, non? Accusamus sint corporis deserunt sunt hic sit consequatur beatae? Ad esse numquam, voluptas reprehenderit. Minus non, eaque asperiores porro assumenda doloribus inventore ad iusto incidunt. Magni optio ipsum nemo ratione, doloremque deserunt incidunt nihil excepturi, amet maiores reiciendis quas voluptatibus laborum enim provident facere natus rem commodi?'
+		}
+		/* Counters */
+			main{ counter-reset: clase;	}
+			main .header h1::before{
+				counter-increment: clase;
+				content: 'Clase ' counter(clase) ': ';
+			}
+			article{ counter-reset: tema; }
+			section h1::before{
+				counter-increment: tema;
+				content: 'Tema ' counter(tema) ': ';
+			}
+			.before ul{
+				list-style: none;
+			}
+			/*reinicio*/
+			.before	section > ul{ counter-reset: primario; }
+			.before	li > ul{ counter-reset: secundario; }
+			.before	li > ul > li > ul{ counter-reset: terciario; } 
+			.before	li > ul > li > ul > li > ul { counter-reset: cuarto }
+			/*incremento*/
+			.before	section > ul > li{ counter-increment: primario; }
+			.before	li > ul > li{ counter-increment: secundario; }
+			.before	li > ul > li > ul > li{ counter-increment: terciario }
+			.before	li > ul > li > ul > li > ul > li { counter-increment: cuarto }
+			/*aplicacion*/
+			.before	section > ul > li::before,
+			.before	li > ul > li::before,
+			.before	li > ul > li > ul > li::before,
+			.before	li > ul > li > ul > li > ul > li::before{
+					content: counter(primario) '.' counter(secundario) '.' counter(terciario) '.' counter(cuarto);
+					padding-right: 2rem;
+				}
+		/*Sprite*/
+			.sprite{
+				border: 2px solid #333;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+			}
+			.sprite a{
+				width:calc(32px);
+				height: calc(32px);
+				border:2px solid #333;
+					background-image: url(../assets/social/social-media.png);
+					background-size: 352px;
+					margin-right: 6rem; 
+			}
+			/*Texto*/
+				.sprite a:nth-child(1)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'facebook';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(2)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'twitter';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(3)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'linkein';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(4)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'youtube';
+					padding:.5rem;
+				}
+			/*Redes sociales - transparentes*/
+				.sprite a:nth-child(2){
+					background-position: calc(-8 * 32px) calc(0 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3){
+					background-position: calc(-4 * 32px) calc(0 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4){
+					background-position: calc(-10 * 32px) calc(0 * 32px); /*youtube*/
+				}
+			/*redes sociales - color*/
+				.sprite a:nth-child(1):hover{
+					background-position: calc(0 * 32px) calc(-1 * 32px); /*Facebook*/	
+				}
+				.sprite a:nth-child(2):hover{
+					background-position: calc(-8 * 32px) calc(-1 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3):hover{
+					background-position: calc(-4 * 32px) calc(-1 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4):hover{
+					background-position: calc(-10 * 32px) calc(-1 * 32px); /*youtube*/
+				}
+			/*redes sociales - fondo oscuro (ACTIVE) */
+				.sprite a:nth-child(1):active{
+					background-position: calc(0 * 32px) calc(-2 * 32px); /*Facebook*/	
+				}
+				.sprite a:nth-child(2):active{
+					background-position: calc(-8 * 32px) calc(-2 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3):active{
+					background-position: calc(-4 * 32px) calc(-2 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4):active{
+					background-position: calc(-10 * 32px) calc(-2 * 32px); /*youtube*/
+				}
+		/*Position*/
+			.position{
+				list-style: none;
+				display: flex;
+				padding: 0;
+				color:#ccc;
+				background-color: #248;
+			}
+			.position li{
+				position: relative;
+				padding:1rem;
+				z-index: 9999;
+			}
+			.position ul{
+				list-style: none;
+				padding: 0;
+				display: none;
+				position: absolute;
+				top:100%;
+				left:0;
+			}
+			.position ul ul{
+				top:0;
+				left:100%;
+			}
+			.position li:hover,
+			.position li:hover ul,
+			.position ul ul li:hover,
+			.position ul ul li:hover ul{
+				background-color: #36c;
+			}
+			.position ul li:hover,
+			.position ul li:hover ul{
+				background-color: #124;
+			}
+			.position li:hover > ul{
+				display: block;
+			}
+			.vertical, .vertical ul{
+				list-style: none;
+				padding:0;
+				color:#ddd;
+				background-color: #284;
+			}
+			.vertical ul{
+				display: none;
+			}
+			.vertical li{
+				position: relative;
+				padding:.5rem 1rem;
+			}
+			.vertical li:hover{
+				background-color: #142;
+				z-index: 9999;
+			}
+			.vertical li:hover > ul{
+				display: inline;
+			}
+			.vertical ul li:hover,
+			.vertical ul li:hover ul{
+				background-color: #3c6;
+			}
+			.vertical ul ul li{
+				position: absolute;
+				top:0;
+				left:calc(50% - .5rem);
+				right: 0;
+			}
+			.vertical ul ul li:hover{
+				background-color: #284;
+			}
+/*Formulario de Contacto*/
+	#contact{
+		display: flex;
+		flex-direction: column;
+		min-width: 360px;
+		max-width: 720px;
+		margin:auto;
+	}
+	#contact label{
+		height:0;
+		margin-top: .5em;
+	}
+	#contact input,
+	#contact textarea{
+		outline: none;
+		padding:.5em 1em; /*top right bottom left*/
+		border-radius: .3em;
+		border: 2px solid #fff;
+		font-size: 1em;
+	}
+	#contact textarea{
+		resize: none;
+		height: 80px;
+	}
+	#contact input:focus,
+	#contact textarea:focus{
+		border-color:rgba(18,36, 136, .5);
+		box-shadow: 0 0 .5em #ccc;
+	}
+	#contact button{
+		cursor: pointer;
+		border:2px solid;
+		padding:.5em;
+		text-transform: uppercase;
+		font-size: 1em;
+		color:#ccc;
+		background-color: rgba(34,68,136,.5);
+	}
+	#contact button:hover{
+		background-color: rgba(68, 136, 255, .5);
+	}
+	/*
+		pseudo-class: 
+			instancia de un elemento, caracteristica o estado al que se hace referencia.
+			Todos
+				:hover 	(pasar el mouse por encima)
+				:firt-child (primer hijo del elemento contendor)
+				:last-child (ultimo hijo del elemento contenedor);
+				:first-of-type (primero de su tipo)
+			Hipervinculos
+				:link 	(hipervinculo sin visitar)
+				:visited(hipervinculo visitado)
+				:active (hipervinculo siendo presionado)
+			Campos de Form
+				:focus 	(foco sobre campo de formulario)
+		;
+		pseudo-element:
+			una parte del contenido del elemento al que se hace referencia
+			Todos
+				::first-letter (primera letra del contenido)
+				::first-line (primera linea del contenido)
+				::before (inserta contenido antes del contenido del elemento)
+				::after (inserta contenido despues del contenido del elemento)
+		;
+	*/

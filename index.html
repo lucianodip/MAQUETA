@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!-- CABECERA: Parte NO VISIBLE -->
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetación Web</title>
+	<link rel="icon" href="assets/img/css.png">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body><!-- CUERPO: Parte VISIBLE -->
+	<!-- Estructura Basica con EMMET 
+	(header#header>.header)+(main>article*3>section*3)+footer#footer -->
+	<header id="header"><!-- Cabecera / Introduccion-->
+		<div class="header">
+			<h1>Maquetacion Web</h1>
+			<p>&lt;HTML> &amp; {CSS}</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<!-- Rutas Internas / Relativas -->
+				<li><a href="#">Inicio</a></li>
+				<li><a href="about.html">Acerca</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<!-- Ruta Ancla / Marcador (#Id)-->
+				<li><a href="#contact">Contacto</a></li>
+				<!-- Rutas Externas / Absolutas -->
+				<li><a href="https://github.com/c215714n/educacionit/tree/maquetacion-lunes-10hs" target="_blank">GitHub</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main><!-- Contenido Principal / nudo -->
+		<article><!-- Contenido Independiente / Articulo -->
+			<header class="header">
+				<h1>Introduccion Maquetacion</h1>
+			</header>
+			<section><!-- Contenido Contextualizado / Seccion -->
+				<header>
+					<h1>Elementos Semanticos</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sed repellendus necessitatibus omnis sunt maxime corrupti fugit, saepe porro facilis minima aperiam doloremque itaque, eum veritatis enim? Harum corporis iste, sint illo commodi non soluta eius, minima assumenda adipisci, temporibus cupiditate iusto? Hic, maiores praesentium accusantium harum dignissimos accusamus exercitationem rem ullam minus nostrum magnam, aperiam! Commodi, molestias, inventore. Incidunt neque harum sint, minima explicabo et nihil delectus accusamus quod? Ipsam aut illo, vitae blanditiis, qui quae aliquam dolorum corrupti harum modi, quisquam fugiat reiciendis error porro at est maxime perferendis nihil alias nostrum distinctio soluta ipsa accusantium eos. Error?
+				</p>
+				<ul>
+					<h2>Etiquetas</h2>
+					<li>&lt;header></li>
+					<li>&lt;nav></li>
+					<li>&lt;main>
+						<ul>
+							<li>&lt;article></li>
+							<li>&lt;section></li>
+							<li>&lt;aside></li>
+						</ul>
+					</li>
+					<li>&lt;footer></li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Jerarquia de Selectores</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur dolorum laborum eveniet molestias omnis corporis. Sequi eligendi eum tempore velit. Ad non aspernatur obcaecati dolorum voluptatum, blanditiis, quas earum et mollitia, nobis nemo quis dignissimos sint provident ipsa. Sint exercitationem eos officia, culpa perspiciatis autem? Sit accusamus harum hic cum, veniam in, eligendi sapiente voluptas, error, nobis perspiciatis. Porro, sunt. Exercitationem vitae, maiores aliquam nostrum numquam rerum architecto velit unde distinctio hic amet debitis culpa enim, sunt perferendis illum! Odit earum, expedita consectetur dolorem recusandae vero distinctio, minima, ab velit quas suscipit hic? Nulla, minus natus at ipsa sapiente?
+				</p>
+				<ul>
+					<h2>Selectores</h2>
+					<li>
+						<strong>tag selector</strong>
+						<ul>
+							<li>header{...}</li>
+							<li>header h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>class selector</strong>
+						<ul>
+							<li><span>.header</span>{...}</li>
+							<li><span>.header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>id selector</strong>
+						<ul>
+							<li><span>#header</span>{...}</li>
+							<li><span>#header</span> h1{...}</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a Flexbox</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Distribucion (Justify-Content)</h1>
+				</header>
+				<p>
+					
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolore, commodi culpa aspernatur recusandae quos deleniti sed sit modi perspiciatis, illo suscipit assumenda in animi perferendis autem impedit ab corporis tenetur asperiores, fugiat facere iste? Natus saepe fugit eveniet quasi, porro inventore alias dolores iure, numquam hic illum, aspernatur harum, aut blanditiis! Excepturi recusandae animi iste provident nisi, mollitia dignissimos, ea dolorum odio similique distinctio odit nobis magnam aut iure delectus earum est, repellat id consectetur doloremque ratione. Similique nostrum repellat ipsam asperiores tempore incidunt, exercitationem non dolore quam numquam consequuntur, placeat aperiam architecto molestiae ullam autem! Similique exercitationem, hic.
+				</p>
+				<div class="flex">
+					<div> 1 </div>
+					<div> 2 </div>
+					<div> 3 </div>
+					<div> 4 </div>
+					<div> 5 </div>
+					<div> 6 </div>
+					<div> 7 </div>
+				</div>
+				<ul>
+					<li>
+						<strong>flex-start: </strong> distribuye los elementos al comienzo de la etiqueta (izquierda)
+					</li>
+					<li>
+						<strong>flex-end: </strong> distribuye los elementos al final de la etiqueta (derecha)
+					</li>
+					<li>
+						<strong>center: </strong> distribuye los elementos hacia el centro de la etiqueta (horizontal)
+					</li>
+					<li>
+						<strong>space-around: </strong> separa los elementos sumando las distancias de los margenes
+					</li>
+					<li>
+						<strong>space-between: </strong> separa los elementos de extremo a extremo
+					</li>
+					<li>
+						<strong>space-evenly: </strong> distribuye equitativamente los elementos dentro de la etiqueta
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion (Align-Items)</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi mollitia nam qui accusamus unde officiis, incidunt similique molestias libero eius at suscipit atque iste rerum excepturi laboriosam maiores quidem nihil quia explicabo provident sit. Autem, rerum dignissimos voluptatibus quidem est, iure perferendis. Magni minus culpa ullam possimus, est atque libero eligendi vel, consequuntur assumenda, voluptates doloremque! Magni repellendus quaerat quia qui error itaque quod dolore aut laborum blanditiis, provident hic in inventore officiis, doloremque nisi, rem eaque accusamus animi sequi. Odio sit dicta sequi debitis distinctio repellat, nam vel officia, rem a accusamus possimus ex maiores rerum expedita doloremque consectetur.
+				</p>
+				<div class="flex align">
+					<div> 1 </div>
+					<div> 2 </div>
+					<div> 3 </div>
+					<div> 4 </div>
+					<div class="self"> 5 </div>
+					<div> 6 </div>
+					<div> 7 </div>
+				</div>
+				<ul>
+					<li>
+						<strong>flex-start: </strong> organiza los elementos al comienzo de la etiqueta (arriba)
+					</li>
+					<li>
+						<strong>flex-end: </strong> organiza los elementos al final de la etiqueta (abajo)
+					</li>
+					<li>
+						<strong>center: </strong> organiza los elementos hacia el centro de la etiqueta (vertical)
+					</li>
+					<li>
+						<strong>baseline: </strong> organiza los elementos en base al tamaño de la tipografia
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Direccion (Flex-Direction)</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat repellendus maxime voluptate iusto. Ipsam eligendi repellat deleniti tenetur unde sunt nam facere porro debitis vel at eos dignissimos hic praesentium, nisi quo cumque, ea maxime dolores delectus voluptatem molestias eum. At, laudantium suscipit soluta numquam iure corrupti laboriosam aut cum repellendus ullam repudiandae exercitationem necessitatibus deserunt eaque officiis fuga in illum saepe. Nulla sunt distinctio ut animi accusamus dolorem totam nesciunt quisquam dolores, doloremque necessitatibus consequuntur, quasi non, dolorum alias molestias expedita tempora vitae. Dolor vel doloribus mollitia! Doloribus officia eaque vero quod corporis! Blanditiis illo itaque cum ad nostrum?
+				</p>
+				<ul>
+					<li class="flex align col">
+						<strong>Column</strong>
+						<div> 1 </div>
+						<div> 2 </div>
+						<div> 3 </div>
+						<div> 4 </div>
+						<div> 5 </div>
+					</li>
+					<li class="flex align reverse">
+						<strong>Row-Reverse</strong>
+						<div> 1 </div>
+						<div> 2 </div>
+						<div> 3 </div>
+						<div> 4 </div>
+						<div> 5 </div>
+					</li>
+					<li class="flex align col-reverse">
+						<strong>Column-Reverse</strong>
+						<div> 1 </div>
+						<div> 2 </div>
+						<div> 3 </div>
+						<div> 4 </div>
+						<div> 5 </div>
+					</li>
+				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a CSS-Grid</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Sistema de Grillas</h1>
+				</header>
+				<div class="grid">
+					<div> celda 1</div>
+					<div> celda 2</div>
+					<div> celda 3</div>
+					<div> celda 4</div>
+					<div> celda 5</div>
+				</div>
+				<ul>
+					<li>
+						<strong>grid-template-columns: </strong> Permite crear las columnas para organizar el contenido, debemos indicar mediante tamaños o el valor auto la cantidad.
+					</li>
+					<li>
+						<strong>grid-template-rows: </strong> Permite crear y asignar el tamaño de las filas, a diferencia de <em>columns</em> NO define la cantidad maxima de las mismas.
+					</li>
+					<li>
+						<strong>gap: </strong> Permite definir el espaciado entre celdas, aplicandolo a filas y columnas respectivamente, aunque tambien existen los atributos <em>row-gap y column-gap.</em>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion y Distribucion</h1>
+				</header>
+				<div class="grid-align">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Justify-content: </strong> Permite Distribuir el contenido de manera horizontal, admite los mismos valores que Flexbox.
+					</li>
+					<li>
+						<strong>Align-content: </strong> Permite Organizar el contenido de la grila de manera vertical, admite los mismos valores que el atributo <em>align-items de Flexbox.</em>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Plantilla de Grilla</h1>
+				</header>
+				<div class="grid template">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+				</div>
+				<ul>
+					<li>
+						<strong>grid-template-areas: </strong> Permite definir mediante nombres de area los espacios ocupados por las celdas, por defecto el tamaño es automatico, pero si existe un <em>grid-template-rows / grid-template-columns</em> afectara al diseño de las mismas.
+					</li>
+					<li>
+						<strong>grid-area: </strong> Asigna el nombre de area a la etiqueta donde se aplique dicho atributo.
+					</li>
+				</ul>
+			</section>
+		</article>
+		<article class="before">
+			<header class="header">
+				<h1></h1>
+			</header>
+			<p></p>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<ul class="primario">
+					<li> Maquetacion Web
+						<ul class="secundario">
+							<li> Elementos Semanticos
+								<ul class="terciario">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</li>
+							<li> Selectores CSS</li>
+						</ul>
+					</li>
+					<li> Float
+						<ul>
+							<li>Left</li>
+							<li>Right</li>
+						</ul>
+					</li>
+					<li> Background
+						<ul>
+							<li>Size</li>
+							<li>Position</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<div class="sprite">
+					<a href="">
+					</a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>				
+				</div>
+				<div>
+					<a href="">img</a>
+					<a href="">input</a>
+					<a href="">textarea</a>
+					<a href="">button</a>
+				</div>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>menu con Position</h1>
+			</header>
+			<section>
+				<header>
+					<h1>menu desplegable</h1>
+				</header>
+				<ul class="position">
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem</li>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+							<li>SubItem</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+				</ul>	
+				<ul class="vertical">
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem</li>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem</li>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>SubItem
+								<ul>
+									<li>SubSubitem</li>
+								</ul>
+							</li>
+							<li>SubItem</li>
+							<li>SubItem</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer"> <!--Pie / Descenlace-->
+		<div class="social">
+			<a href="https://facebook.com" target="_blank"></a>
+			<a href="https://twitter.com" target="_blank"></a>
+			<a href="https://instagram.com" target="_blank"></a>
+			<a href="https://api.whatsapp.com/send?phone=1123456789" target="_blank"></a>
+		</div>
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contacName">Nombre</label>
+			<input 
+				id="contacName"
+				name="contacName" 
+				type="text" 
+				placeholder="Ingrese su Nombre"
+				pattern="[a-z A-Z]{2,50}"
+				title="Escriba su nombre sin numeros ni simbolos, el mismo debe poseer entre 2 y 50 caracteres" 
+				required />
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo"  
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" 
+				pattern="[0-9]{6,20}"
+				title="Escriba su numero sin guiones ni espacios, este debe contener entre 6 y 20 digitos" 
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 	
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10"
+				maxlength="200"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button>Enviar Consulta</button>
+		</form>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; compañia
+		</p>
+	</footer>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
